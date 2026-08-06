@@ -1,0 +1,38 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# SQLite
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Secrets / local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs (keep .md, ignore .log)
+*.log
+logs/cron-pipeline.log
+
+# Build artifacts
+dist/
+build/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
