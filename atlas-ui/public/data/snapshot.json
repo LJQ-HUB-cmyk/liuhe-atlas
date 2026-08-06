@@ -2,13 +2,3395 @@
   "meta": {
     "lottery_type": 2,
     "lottery_name": "澳门六合彩",
-    "exported_at": "2026-08-07T01:30:22.607782+00:00",
-    "period_count": 0,
-    "real_period_count": 0,
+    "exported_at": "2026-08-06T03:31:01.306408+00:00",
+    "period_count": 20,
+    "real_period_count": 20,
     "synthetic_period_count": 0,
-    "zodiac_map_years": [],
-    "note": "CI fallback — DB query failed: no such table: periods. Local build will populate real data."
+    "zodiac_map_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "note": "Symbol maps derived from 2026 anchor via zodiac cycle rotation. Real 六合 tables vary by publisher; verify against actual draw results."
   },
-  "periods": [],
-  "zodiac_maps": {}
+  "periods": [
+    {
+      "period_id": 2026217,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年08月06日21时32分 星期四",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-08-06 03:31:01",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 34,
+          "zodiac": "兔",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 12,
+          "zodiac": "羊",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 11,
+          "zodiac": "猴",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 30,
+          "zodiac": "牛",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 42,
+          "zodiac": "牛",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 7,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 26,
+          "zodiac": "蛇",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        }
+      ]
+    },
+    {
+      "period_id": 2026213,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年08月02日21时32分 星期日",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-08-02 04:36:59",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 9,
+          "zodiac": "狗",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 5,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 12,
+          "zodiac": "羊",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 22,
+          "zodiac": "兔",
+          "wuxing": "水",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 1,
+          "zodiac": "马",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 15,
+          "zodiac": "龙",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 35,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026212,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年08月01日21时32分 星期六",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-08-01 03:30:46",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 43,
+          "zodiac": "鼠",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 32,
+          "zodiac": "猪",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 16,
+          "zodiac": "兔",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 39,
+          "zodiac": "龙",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 19,
+          "zodiac": "鼠",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 27,
+          "zodiac": "龙",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 6,
+          "zodiac": "牛",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "双"
+        }
+      ]
+    },
+    {
+      "period_id": 2026211,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月31日21时32分 星期五",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-31 03:30:46",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 13,
+          "zodiac": "鼠",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 12,
+          "zodiac": "羊",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 39,
+          "zodiac": "龙",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 37,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 38,
+          "zodiac": "蛇",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 8,
+          "zodiac": "猪",
+          "wuxing": "木",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 1,
+          "zodiac": "马",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026210,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月30日21时32分 星期四",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-30 03:34:24",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 40,
+          "zodiac": "兔",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 37,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 15,
+          "zodiac": "龙",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 17,
+          "zodiac": "虎",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 42,
+          "zodiac": "牛",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 48,
+          "zodiac": "牛",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 49,
+          "zodiac": "马",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026209,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月29日21时32分 星期三",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-29 03:30:34",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 44,
+          "zodiac": "猪",
+          "wuxing": "水",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 5,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 39,
+          "zodiac": "龙",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 14,
+          "zodiac": "蛇",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 21,
+          "zodiac": "龙",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 22,
+          "zodiac": "兔",
+          "wuxing": "水",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 8,
+          "zodiac": "猪",
+          "wuxing": "木",
+          "wave": "红",
+          "odd_even": "双"
+        }
+      ]
+    },
+    {
+      "period_id": 2026208,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月28日21时32分 星期二",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-28 04:04:52",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 7,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 48,
+          "zodiac": "牛",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 40,
+          "zodiac": "兔",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 35,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 23,
+          "zodiac": "虎",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 28,
+          "zodiac": "兔",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 19,
+          "zodiac": "鼠",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026207,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月27日21时32分 星期一",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-27 03:30:23",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 9,
+          "zodiac": "狗",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 40,
+          "zodiac": "兔",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 26,
+          "zodiac": "蛇",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 23,
+          "zodiac": "虎",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 44,
+          "zodiac": "猪",
+          "wuxing": "水",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 13,
+          "zodiac": "鼠",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 31,
+          "zodiac": "鼠",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026206,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月26日21时32分 星期日",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-26 03:30:55",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 9,
+          "zodiac": "狗",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 49,
+          "zodiac": "马",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 37,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 3,
+          "zodiac": "龙",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 40,
+          "zodiac": "兔",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 35,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 47,
+          "zodiac": "虎",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026205,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月25日21时32分 星期六",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-25 04:09:07",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 30,
+          "zodiac": "牛",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 17,
+          "zodiac": "虎",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 39,
+          "zodiac": "龙",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 12,
+          "zodiac": "羊",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 11,
+          "zodiac": "猴",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 28,
+          "zodiac": "兔",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 3,
+          "zodiac": "龙",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026204,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月24日21时32分 星期五",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-24 03:30:59",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 11,
+          "zodiac": "猴",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 12,
+          "zodiac": "羊",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 17,
+          "zodiac": "虎",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 26,
+          "zodiac": "蛇",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 10,
+          "zodiac": "鸡",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 7,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 5,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026203,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月23日21时32分 星期四",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-23 03:30:09",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 12,
+          "zodiac": "羊",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 11,
+          "zodiac": "猴",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 31,
+          "zodiac": "鼠",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 3,
+          "zodiac": "龙",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 44,
+          "zodiac": "猪",
+          "wuxing": "水",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 37,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 25,
+          "zodiac": "鼠",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026202,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月22日21时32分 星期三",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-22 03:30:51",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 21,
+          "zodiac": "龙",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 15,
+          "zodiac": "龙",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 25,
+          "zodiac": "鼠",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 47,
+          "zodiac": "虎",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 13,
+          "zodiac": "鼠",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 45,
+          "zodiac": "龙",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 40,
+          "zodiac": "兔",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "双"
+        }
+      ]
+    },
+    {
+      "period_id": 2026201,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月21日21时32分 星期二",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-21 03:30:25",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 46,
+          "zodiac": "兔",
+          "wuxing": "木",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 28,
+          "zodiac": "兔",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 19,
+          "zodiac": "鼠",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 38,
+          "zodiac": "蛇",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 31,
+          "zodiac": "鼠",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 25,
+          "zodiac": "鼠",
+          "wuxing": "木",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 32,
+          "zodiac": "猪",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "双"
+        }
+      ]
+    },
+    {
+      "period_id": 2026200,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月20日21时32分 星期一",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-20 03:30:47",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 43,
+          "zodiac": "鼠",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 46,
+          "zodiac": "兔",
+          "wuxing": "木",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 3,
+          "ball": 5,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 32,
+          "zodiac": "猪",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 35,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 29,
+          "zodiac": "虎",
+          "wuxing": "土",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 39,
+          "zodiac": "龙",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026199,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月19日21时32分 星期日",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-19 03:30:20",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 17,
+          "zodiac": "虎",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 49,
+          "zodiac": "马",
+          "wuxing": "火",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 42,
+          "zodiac": "牛",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 45,
+          "zodiac": "龙",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 5,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 38,
+          "zodiac": "蛇",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 36,
+          "zodiac": "牛",
+          "wuxing": "土",
+          "wave": "蓝",
+          "odd_even": "双"
+        }
+      ]
+    },
+    {
+      "period_id": 2026198,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月18日21时32分 星期六",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-18 03:30:18",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 48,
+          "zodiac": "牛",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 35,
+          "zodiac": "虎",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 45,
+          "zodiac": "龙",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 4,
+          "ball": 21,
+          "zodiac": "龙",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 12,
+          "zodiac": "羊",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 24,
+          "zodiac": "牛",
+          "wuxing": "木",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 7,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "红",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026197,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月17日21时32分 星期五",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-17 03:30:02",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 40,
+          "zodiac": "兔",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 19,
+          "zodiac": "鼠",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 30,
+          "zodiac": "牛",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 48,
+          "zodiac": "牛",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 44,
+          "zodiac": "猪",
+          "wuxing": "水",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 28,
+          "zodiac": "兔",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 8,
+          "zodiac": "猪",
+          "wuxing": "木",
+          "wave": "红",
+          "odd_even": "双"
+        }
+      ]
+    },
+    {
+      "period_id": 2026196,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月16日21时32分 星期四",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-16 13:20:17",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 3,
+          "zodiac": "龙",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 2,
+          "ball": 37,
+          "zodiac": "鼠",
+          "wuxing": "土",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 24,
+          "zodiac": "牛",
+          "wuxing": "木",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 10,
+          "zodiac": "鸡",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 5,
+          "ball": 41,
+          "zodiac": "虎",
+          "wuxing": "火",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 6,
+          "ball": 19,
+          "zodiac": "鼠",
+          "wuxing": "火",
+          "wave": "红",
+          "odd_even": "单"
+        },
+        {
+          "position": 7,
+          "ball": 39,
+          "zodiac": "龙",
+          "wuxing": "木",
+          "wave": "绿",
+          "odd_even": "单"
+        }
+      ]
+    },
+    {
+      "period_id": 2026194,
+      "lottery_name": "澳门六合彩",
+      "draw_date": "2026年07月14日21时32分 星期二",
+      "source_domain": "82hats7.66852.cc:8443",
+      "fetched_at": "2026-07-14 01:07:48",
+      "numbers": [
+        {
+          "position": 1,
+          "ball": 30,
+          "zodiac": "牛",
+          "wuxing": "水",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 2,
+          "ball": 21,
+          "zodiac": "狗",
+          "wuxing": "土",
+          "wave": "绿",
+          "odd_even": "单"
+        },
+        {
+          "position": 3,
+          "ball": 22,
+          "zodiac": "鸡",
+          "wuxing": "水",
+          "wave": "绿",
+          "odd_even": "双"
+        },
+        {
+          "position": 4,
+          "ball": 15,
+          "zodiac": "龙",
+          "wuxing": "水",
+          "wave": "蓝",
+          "odd_even": "单"
+        },
+        {
+          "position": 5,
+          "ball": 4,
+          "zodiac": "兔",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        },
+        {
+          "position": 6,
+          "ball": 34,
+          "zodiac": "鸡",
+          "wuxing": "金",
+          "wave": "红",
+          "odd_even": "双"
+        },
+        {
+          "position": 7,
+          "ball": 26,
+          "zodiac": "蛇",
+          "wuxing": "金",
+          "wave": "蓝",
+          "odd_even": "双"
+        }
+      ]
+    }
+  ],
+  "zodiac_maps": {
+    "2020": {
+      "1": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "2": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "3": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "4": {
+        "zodiac": "鸡",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "5": {
+        "zodiac": "猴",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "6": {
+        "zodiac": "羊",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "7": {
+        "zodiac": "马",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "8": {
+        "zodiac": "蛇",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "9": {
+        "zodiac": "龙",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "10": {
+        "zodiac": "兔",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "11": {
+        "zodiac": "虎",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "12": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "13": {
+        "zodiac": "马",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "14": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "15": {
+        "zodiac": "狗",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "16": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "17": {
+        "zodiac": "猴",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "18": {
+        "zodiac": "羊",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "19": {
+        "zodiac": "马",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "20": {
+        "zodiac": "蛇",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "21": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "22": {
+        "zodiac": "鸡",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "23": {
+        "zodiac": "猴",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "24": {
+        "zodiac": "羊",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "25": {
+        "zodiac": "马",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "26": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "27": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "28": {
+        "zodiac": "鸡",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "29": {
+        "zodiac": "猴",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "30": {
+        "zodiac": "羊",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "31": {
+        "zodiac": "马",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "32": {
+        "zodiac": "蛇",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "33": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "34": {
+        "zodiac": "鸡",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "35": {
+        "zodiac": "猴",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "36": {
+        "zodiac": "羊",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "37": {
+        "zodiac": "马",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "38": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "39": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "40": {
+        "zodiac": "鸡",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "41": {
+        "zodiac": "猴",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "42": {
+        "zodiac": "羊",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "43": {
+        "zodiac": "马",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "44": {
+        "zodiac": "蛇",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "45": {
+        "zodiac": "狗",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "46": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "47": {
+        "zodiac": "猴",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "48": {
+        "zodiac": "羊",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "49": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      }
+    },
+    "2021": {
+      "1": {
+        "zodiac": "牛",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "2": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "3": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "4": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "5": {
+        "zodiac": "鸡",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "6": {
+        "zodiac": "猴",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "7": {
+        "zodiac": "羊",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "8": {
+        "zodiac": "马",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "9": {
+        "zodiac": "蛇",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "10": {
+        "zodiac": "龙",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "11": {
+        "zodiac": "兔",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "12": {
+        "zodiac": "虎",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "13": {
+        "zodiac": "羊",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "14": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "15": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "16": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "17": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "18": {
+        "zodiac": "猴",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "19": {
+        "zodiac": "羊",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "20": {
+        "zodiac": "马",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "21": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "22": {
+        "zodiac": "狗",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "23": {
+        "zodiac": "鸡",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "24": {
+        "zodiac": "猴",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "25": {
+        "zodiac": "羊",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "26": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "27": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "28": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "29": {
+        "zodiac": "鸡",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "30": {
+        "zodiac": "猴",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "31": {
+        "zodiac": "羊",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "32": {
+        "zodiac": "马",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "33": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "34": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "35": {
+        "zodiac": "鸡",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "36": {
+        "zodiac": "猴",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "37": {
+        "zodiac": "羊",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "38": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "39": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "40": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "41": {
+        "zodiac": "鸡",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "42": {
+        "zodiac": "猴",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "43": {
+        "zodiac": "羊",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "44": {
+        "zodiac": "马",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "45": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "46": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "47": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "48": {
+        "zodiac": "猴",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "49": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      }
+    },
+    "2022": {
+      "1": {
+        "zodiac": "虎",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "2": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "3": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "4": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "5": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "6": {
+        "zodiac": "鸡",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "7": {
+        "zodiac": "猴",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "8": {
+        "zodiac": "羊",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "9": {
+        "zodiac": "马",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "10": {
+        "zodiac": "蛇",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "11": {
+        "zodiac": "龙",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "12": {
+        "zodiac": "兔",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "13": {
+        "zodiac": "猴",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "14": {
+        "zodiac": "牛",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "15": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "16": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "17": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "18": {
+        "zodiac": "鸡",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "19": {
+        "zodiac": "猴",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "20": {
+        "zodiac": "羊",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "21": {
+        "zodiac": "鼠",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "22": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "23": {
+        "zodiac": "狗",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "24": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "25": {
+        "zodiac": "猴",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "26": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "27": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "28": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "29": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "30": {
+        "zodiac": "鸡",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "31": {
+        "zodiac": "猴",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "32": {
+        "zodiac": "羊",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "33": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "34": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "35": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "36": {
+        "zodiac": "鸡",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "37": {
+        "zodiac": "猴",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "38": {
+        "zodiac": "牛",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "39": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "40": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "41": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "42": {
+        "zodiac": "鸡",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "43": {
+        "zodiac": "猴",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "44": {
+        "zodiac": "羊",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "45": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "46": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "47": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "48": {
+        "zodiac": "鸡",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "49": {
+        "zodiac": "虎",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      }
+    },
+    "2023": {
+      "1": {
+        "zodiac": "兔",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "2": {
+        "zodiac": "虎",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "3": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "4": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "5": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "6": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "7": {
+        "zodiac": "鸡",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "8": {
+        "zodiac": "猴",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "9": {
+        "zodiac": "羊",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "10": {
+        "zodiac": "马",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "11": {
+        "zodiac": "蛇",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "12": {
+        "zodiac": "龙",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "13": {
+        "zodiac": "鸡",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "14": {
+        "zodiac": "虎",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "15": {
+        "zodiac": "牛",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "16": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "17": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "18": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "19": {
+        "zodiac": "鸡",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "20": {
+        "zodiac": "猴",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "21": {
+        "zodiac": "牛",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "22": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "23": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "24": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "25": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "26": {
+        "zodiac": "虎",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "27": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "28": {
+        "zodiac": "鼠",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "29": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "30": {
+        "zodiac": "狗",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "31": {
+        "zodiac": "鸡",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "32": {
+        "zodiac": "猴",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "33": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "34": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "35": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "36": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "37": {
+        "zodiac": "鸡",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "38": {
+        "zodiac": "虎",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "39": {
+        "zodiac": "牛",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "40": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "41": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "42": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "43": {
+        "zodiac": "鸡",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "44": {
+        "zodiac": "猴",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "45": {
+        "zodiac": "牛",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "46": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "47": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "48": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "49": {
+        "zodiac": "兔",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      }
+    },
+    "2024": {
+      "1": {
+        "zodiac": "龙",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "2": {
+        "zodiac": "兔",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "3": {
+        "zodiac": "虎",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "4": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "5": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "6": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "7": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "8": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "9": {
+        "zodiac": "猴",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "10": {
+        "zodiac": "羊",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "11": {
+        "zodiac": "马",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "12": {
+        "zodiac": "蛇",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "13": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "14": {
+        "zodiac": "兔",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "15": {
+        "zodiac": "虎",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "16": {
+        "zodiac": "牛",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "17": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "18": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "19": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "20": {
+        "zodiac": "鸡",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "21": {
+        "zodiac": "虎",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "22": {
+        "zodiac": "牛",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "23": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "24": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "25": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "26": {
+        "zodiac": "兔",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "27": {
+        "zodiac": "虎",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "28": {
+        "zodiac": "牛",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "29": {
+        "zodiac": "鼠",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "30": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "31": {
+        "zodiac": "狗",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "32": {
+        "zodiac": "鸡",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "33": {
+        "zodiac": "虎",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "34": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "35": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "36": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "37": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "38": {
+        "zodiac": "兔",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "39": {
+        "zodiac": "虎",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "40": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "41": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "42": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "43": {
+        "zodiac": "狗",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "44": {
+        "zodiac": "鸡",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "45": {
+        "zodiac": "虎",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "46": {
+        "zodiac": "牛",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "47": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "48": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "49": {
+        "zodiac": "龙",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      }
+    },
+    "2025": {
+      "1": {
+        "zodiac": "蛇",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "2": {
+        "zodiac": "龙",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "3": {
+        "zodiac": "兔",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "4": {
+        "zodiac": "虎",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "5": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "6": {
+        "zodiac": "鼠",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "7": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "8": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "9": {
+        "zodiac": "鸡",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "10": {
+        "zodiac": "猴",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "11": {
+        "zodiac": "羊",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "12": {
+        "zodiac": "马",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "13": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "14": {
+        "zodiac": "龙",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "15": {
+        "zodiac": "兔",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "16": {
+        "zodiac": "虎",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "17": {
+        "zodiac": "牛",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "18": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "19": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "20": {
+        "zodiac": "狗",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "21": {
+        "zodiac": "兔",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "22": {
+        "zodiac": "虎",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "23": {
+        "zodiac": "牛",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "24": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "25": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "26": {
+        "zodiac": "龙",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "27": {
+        "zodiac": "兔",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "28": {
+        "zodiac": "虎",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "29": {
+        "zodiac": "牛",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "30": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "31": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "32": {
+        "zodiac": "狗",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "33": {
+        "zodiac": "兔",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "34": {
+        "zodiac": "虎",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "35": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "36": {
+        "zodiac": "鼠",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "37": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "38": {
+        "zodiac": "龙",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "39": {
+        "zodiac": "兔",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "40": {
+        "zodiac": "虎",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "41": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "42": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "43": {
+        "zodiac": "猪",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "44": {
+        "zodiac": "狗",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "45": {
+        "zodiac": "兔",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "46": {
+        "zodiac": "虎",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "47": {
+        "zodiac": "牛",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "48": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "49": {
+        "zodiac": "蛇",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      }
+    },
+    "2026": {
+      "1": {
+        "zodiac": "马",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "2": {
+        "zodiac": "蛇",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "3": {
+        "zodiac": "龙",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "4": {
+        "zodiac": "兔",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "5": {
+        "zodiac": "虎",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "6": {
+        "zodiac": "牛",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "7": {
+        "zodiac": "鼠",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "8": {
+        "zodiac": "猪",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "9": {
+        "zodiac": "狗",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "10": {
+        "zodiac": "鸡",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "11": {
+        "zodiac": "猴",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "12": {
+        "zodiac": "羊",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "13": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "14": {
+        "zodiac": "蛇",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "15": {
+        "zodiac": "龙",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "16": {
+        "zodiac": "兔",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "17": {
+        "zodiac": "虎",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "18": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "19": {
+        "zodiac": "鼠",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "20": {
+        "zodiac": "猪",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "21": {
+        "zodiac": "龙",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "22": {
+        "zodiac": "兔",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "23": {
+        "zodiac": "虎",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "24": {
+        "zodiac": "牛",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "25": {
+        "zodiac": "鼠",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "26": {
+        "zodiac": "蛇",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "27": {
+        "zodiac": "龙",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "28": {
+        "zodiac": "兔",
+        "wuxing": "土",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "29": {
+        "zodiac": "虎",
+        "wuxing": "土",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "30": {
+        "zodiac": "牛",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "31": {
+        "zodiac": "鼠",
+        "wuxing": "水",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "32": {
+        "zodiac": "猪",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "33": {
+        "zodiac": "龙",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "34": {
+        "zodiac": "兔",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "35": {
+        "zodiac": "虎",
+        "wuxing": "金",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "36": {
+        "zodiac": "牛",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "37": {
+        "zodiac": "鼠",
+        "wuxing": "土",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "38": {
+        "zodiac": "蛇",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "39": {
+        "zodiac": "龙",
+        "wuxing": "木",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "40": {
+        "zodiac": "兔",
+        "wuxing": "火",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "41": {
+        "zodiac": "虎",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "42": {
+        "zodiac": "牛",
+        "wuxing": "金",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "43": {
+        "zodiac": "鼠",
+        "wuxing": "金",
+        "wave": "绿",
+        "odd_even": "单"
+      },
+      "44": {
+        "zodiac": "猪",
+        "wuxing": "水",
+        "wave": "绿",
+        "odd_even": "双"
+      },
+      "45": {
+        "zodiac": "龙",
+        "wuxing": "水",
+        "wave": "红",
+        "odd_even": "单"
+      },
+      "46": {
+        "zodiac": "兔",
+        "wuxing": "木",
+        "wave": "红",
+        "odd_even": "双"
+      },
+      "47": {
+        "zodiac": "虎",
+        "wuxing": "木",
+        "wave": "蓝",
+        "odd_even": "单"
+      },
+      "48": {
+        "zodiac": "牛",
+        "wuxing": "火",
+        "wave": "蓝",
+        "odd_even": "双"
+      },
+      "49": {
+        "zodiac": "马",
+        "wuxing": "火",
+        "wave": "绿",
+        "odd_even": "单"
+      }
+    }
+  }
 }
