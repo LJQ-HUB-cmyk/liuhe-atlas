@@ -17,9 +17,41 @@ LOTTERY_TYPE = 2  # 澳门 only
 
 
 def export_snapshot():
+    # CI / GitHub Actions may not have the DB. Write a minimal valid snapshot
+    # so the frontend doesn't crash and the deploy still succeeds.
     if not DB_PATH.exists():
-        raise FileNotFoundError(f"DB not found at {DB_PATH}")
+        return _write_empty_snapshot("DB not found")
 
+    try:
+        return _export_from_db()
+    except sqlite3.OperationalError as e:
+        # Missing table (CI runner without schema) or other DB error.
+        return _write_empty_snapshot(f"DB query failed: {e}")
+
+
+def _write_empty_snapshot(reason: str):
+    print(f"[WARN] {reason}; writing empty snapshot (CI fallback)")
+    UI_PUBLIC.parent.mkdir(parents=True, exist_ok=True)
+    empty = {
+        "meta": {
+            "lottery_type": LOTTERY_TYPE,
+            "lottery_name": "澳门六合彩",
+            "exported_at": datetime.now(timezone.utc).isoformat(),
+            "period_count": 0,
+            "real_period_count": 0,
+            "synthetic_period_count": 0,
+            "zodiac_map_years": [],
+            "note": f"CI fallback — {reason}. Local build will populate real data.",
+        },
+        "periods": [],
+        "zodiac_maps": {},
+    }
+    with open(UI_PUBLIC, "w", encoding="utf-8") as f:
+        json.dump(empty, f, ensure_ascii=False, indent=2)
+    return empty
+
+
+def _export_from_db():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
