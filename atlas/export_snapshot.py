@@ -11,7 +11,9 @@ from pathlib import Path
 THIS_FILE = Path(__file__).resolve()
 PROJECT_ROOT = THIS_FILE.parent
 DB_PATH = PROJECT_ROOT / "data" / "lotto.db"
-UI_PUBLIC = Path("/Users/yimgao/dev/liuhe/atlas-ui/public/data/snapshot.json")
+# Path relative to atlas/ so the script works on any host (local Mac, Linux CI,
+# GitHub Actions runner). Repo layout: ../atlas-ui/public/data/snapshot.json
+UI_PUBLIC = PROJECT_ROOT.parent / "atlas-ui" / "public" / "data" / "snapshot.json"
 
 LOTTERY_TYPE = 2  # 澳门 only
 
