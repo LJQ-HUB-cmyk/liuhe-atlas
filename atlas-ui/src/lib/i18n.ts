@@ -37,7 +37,7 @@ function setLocaleGlobal(l: Locale) {
 
 // Translation tables
 type TKey =
-  | 'app.title' | 'app.subtitle' | 'app.copyNumbers' | 'app.refreshData'
+  | 'app.title' | 'app.subtitle' | 'app.copyNumbers' | 'app.refreshData' | 'app.guide'
   | 'disclaimer.tag' | 'disclaimer.title' | 'disclaimer.body'
   | 'status.data' | 'status.draws' | 'status.updated' | 'status.model' | 'status.signal'
   | 'status.signalNoSignal' | 'status.signalWeak' | 'status.signalModerate' | 'status.signalStrong'
@@ -78,6 +78,7 @@ export const TRANSLATIONS: Record<Locale, Record<TKey, string>> = {
     'app.subtitle': '澳门六合彩 · 统计分析研究项目',
     'app.copyNumbers': '复制号码',
     'app.refreshData': '刷新数据',
+    'app.guide': '使用指南',
     'disclaimer.tag': '模拟模式 · 非投注建议',
     'disclaimer.title': '⚠️',
     'disclaimer.body': '本工具基于历史数据用贝叶斯聚合输出概率分布。这是统计学习项目，不是预测服务。真实开奖是 i.i.d. 均匀随机 —— 长期期望 ROI 必为负，不受模型输出影响。不提供也不支持任何真实下注。详见下方"Expected loss"小组件。',
@@ -235,6 +236,7 @@ export const TRANSLATIONS: Record<Locale, Record<TKey, string>> = {
     'app.subtitle': 'Statistical-learning artifact for Macau Lottery (澳门)',
     'app.copyNumbers': 'Copy numbers',
     'app.refreshData': 'Refresh data',
+    'app.guide': 'Guide',
     'disclaimer.tag': 'SIMULATION MODE · NOT BETTING ADVICE',
     'disclaimer.title': '⚠️',
     'disclaimer.body': 'This tool uses Bayesian aggregation on historical lottery data to output a probability distribution. It is a statistical-learning artifact, NOT a prediction service. Real lottery draws are i.i.d. uniform random — expected long-term ROI is negative regardless of model output. No actual wagering is enabled or endorsed. See the "Expected loss" widget below for the math.',

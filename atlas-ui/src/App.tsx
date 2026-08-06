@@ -27,6 +27,7 @@ import { RollingWindowBacktest } from './components/RollingWindowBacktest';
 import { AutoPick } from './components/AutoPick';
 import { ExportReport } from './components/ExportReport';
 import { CopyNumbersWithMeta } from './components/CopyNumbersWithMeta';
+import { UserGuide } from './components/UserGuide';
 
 const COST_PER_PERIOD = 1;
 const TARGET_YEAR = 2026;
@@ -38,6 +39,7 @@ export default function App() {
   const [mode, setMode] = useState<SelectionMode>('top-n');
   const [n, setN] = useState(20);
   const [selected, setSelected] = useState<Set<number>>(new Set());
+  const [showGuide, setShowGuide] = useState(false);
 
   const loadSnapshot = async () => {
     try {
@@ -131,6 +133,10 @@ export default function App() {
 
   const totalSelected = Math.max(selected.size, n);
 
+  if (showGuide) {
+    return <UserGuide onClose={() => setShowGuide(false)} />;
+  }
+
   return (
     <div className="min-h-screen bg-bg-base">
       <DisclaimerBanner />
@@ -148,6 +154,18 @@ export default function App() {
           <div className="flex items-center gap-2 flex-wrap">
             <ThemeSwitcher />
             <LanguageSwitcher />
+            <button
+              type="button"
+              onClick={() => setShowGuide(true)}
+              className="
+                px-3 py-1.5 rounded text-xs font-medium
+                bg-bg-raised border border-line-default text-ink-secondary
+                hover:border-line-strong transition
+              "
+              title={t('app.guide') ?? '使用指南'}
+            >
+              📖 {t('app.guide') ?? '使用指南'}
+            </button>
             <CopyNumbersWithMeta snapshot={snapshot} selected={Array.from(selected)} />
             <ExportReport snapshot={snapshot} selected={Array.from(selected)} mode={mode} n={n} />
             <button
