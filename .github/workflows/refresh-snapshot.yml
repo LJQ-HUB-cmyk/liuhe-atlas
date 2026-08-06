@@ -1,0 +1,59 @@
+name: Refresh snapshot
+
+on:
+  schedule:
+    # 22:00 UTC = ~06:00 Beijing / ~18:00 EDT (next day)
+    # 距 21:32 澳门 draw 约 30 分钟, 让本地 cron 先跑完
+    - cron: '0 22 * * *'
+  workflow_dispatch:    # 手动触发: Actions tab → Refresh snapshot → Run
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        working-directory: atlas
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --quiet scrapy requests pymysql
+
+      - name: Fetch latest lottery data
+        working-directory: atlas
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          # Best-effort: try to refresh. If upstream is down, we still commit
+          # the existing snapshot.json (no-op) so Vercel rebuild has fresh code.
+          source .venv/bin/activate
+          python atlas/spiders/m2_5_daily_fetcher.py || echo "WARN: fetcher failed, keeping existing snapshot"
+
+      - name: Re-export snapshot.json
+        working-directory: atlas
+        run: |
+          source .venv/bin/activate
+          python export_snapshot.py
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet atlas-ui/public/data/snapshot.json; then
+            echo "snapshot.json unchanged, skipping commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add atlas-ui/public/data/snapshot.json
+          git commit -m "chore: refresh snapshot.json $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push origin main
+          echo "snapshot pushed → Vercel will rebuild"
