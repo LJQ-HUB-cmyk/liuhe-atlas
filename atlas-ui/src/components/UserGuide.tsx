@@ -4,11 +4,9 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 /**
- * User Guide — explains every section of the app.
- * Toggled by the 📖 Guide button in the header.
- *
- * Bilingual content lives inline (no i18n dependency) for simplicity —
- * the button label uses the i18n key 'app.guide'.
+ * User Guide — plain-language, metaphor-heavy explanations.
+ * Toggled by the 📖 button in the header.
+ * No jargon. No formulas unless they're the one that matters.
  */
 
 interface Section {
@@ -20,35 +18,31 @@ interface Section {
 const SECTIONS: Section[] = [
   {
     id: 'overview',
-    title: { zh: '这是什么', en: 'What this is' },
+    title: { zh: '这是个啥', en: 'What is this' },
     body: {
       zh: (
         <>
           <p>
-            六合图谱 · Atlas 是一个<strong>统计学习 demo</strong>，不是预测服务。
-            它的作用是把历史开奖数据按多种维度（数字、生肖、五行、波色）做概率分布估计，
-            让你<strong>看到数据里的模式</strong>，并思考"如果用这模式选号，长期 ROI 是什么"。
+            一句话：这是一台<strong>"彩票考古机"</strong>。
+            它把过去开过的号码都翻出来，数一数谁出现得多、谁出现得少，然后画成图给你看。
           </p>
           <p>
-            ⚠️ 真实澳门 / 香港 / 任何彩票开奖都是 <strong>i.i.d. 均匀随机</strong>，
-            也就是说<strong>历史不会影响未来</strong>。本工具展示的所有"信号"在数学上长期都不会赢过随机选号。
-            详见顶部红色 DisclaimerBanner 和"期望亏损模拟器"。
+            但记住一件事：开奖是<strong>摇奖机摇出来的，机器没有记性</strong>。
+            就像抛硬币——就算连抛了 10 次正面，第 11 次还是五五开。
+            所以这个工具只能让你"看看过去"，<strong>不能</strong>告诉你"下次开什么"。
           </p>
         </>
       ),
       en: (
         <>
           <p>
-            六合图谱 · Atlas is a <strong>statistical-learning demo</strong>, not a prediction service.
-            It estimates probability distributions over historical lottery draws across multiple
-            dimensions (numbers, zodiac, wuxing, wave) so you can <strong>see the patterns in the data</strong>
-            and reason about long-run ROI if you were to bet using those patterns.
+            In one line: this is a <strong>"lottery archaeology machine"</strong>.
+            It digs up all past drawn numbers, counts how often each appears, and draws charts for you.
           </p>
           <p>
-            ⚠️ Real Macau / HK / any lottery draw is <strong>i.i.d. uniform random</strong> —
-            the past does <strong>not</strong> influence the future. Every "signal" this tool shows
-            is mathematically guaranteed to lose to random picking over the long run.
-            See the red DisclaimerBanner at the top and the Expected-Loss card below.
+            But remember: draws come from a <strong>machine with no memory</strong>.
+            Like a coin — even after 10 heads in a row, the 11th toss is still 50/50.
+            So this tool only lets you "look at the past". It <strong>cannot</strong> tell you what comes next.
           </p>
         </>
       ),
@@ -56,66 +50,60 @@ const SECTIONS: Section[] = [
   },
   {
     id: 'topbar',
-    title: { zh: '顶部按钮', en: 'Top bar buttons' },
+    title: { zh: '顶上一排按钮', en: 'Top bar buttons' },
     body: {
       zh: (
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>🌙 / ☀️ 主题切换</strong>：深色 / 浅色模式，localStorage 记忆。</li>
-          <li><strong>中文 / English</strong>：i18n 全文翻译。</li>
-          <li><strong>📋 复制号码</strong>：复制当前选中的号码，含模型名 + 时间戳的富文本。</li>
-          <li><strong>📄 导出 PDF</strong>：新窗口打开打印版 HTML 报告，用浏览器原生 Ctrl+P → "保存为 PDF"。</li>
-          <li><strong>刷新数据</strong>：重新 fetch <code>/data/snapshot.json</code>。不会重跑模型。</li>
-          <li><strong>📖 使用指南</strong>：就是你现在看到的这个页面。</li>
+          <li><strong>🌙 / ☀️</strong> 换皮肤（深色 / 浅色），纯好看。</li>
+          <li><strong>中文 / English</strong> 换语言。</li>
+          <li><strong>📋 复制号码</strong> 把你选中的号码复制走（带点说明文字）。</li>
+          <li><strong>📄 导出 PDF</strong> 把当前分析打印成一张报告（新窗口 → Ctrl+P 保存成 PDF）。</li>
+          <li><strong>刷新数据</strong> 重新读一次数据文件（数据每天自动更新，一般不用点）。</li>
+          <li><strong>📖 使用指南</strong> 就是你现在看的这个。</li>
         </ul>
       ),
       en: (
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>🌙 / ☀️ Theme</strong>: dark / light toggle, persisted in localStorage.</li>
-          <li><strong>中文 / English</strong>: full i18n switch.</li>
-          <li><strong>📋 Copy numbers</strong>: copies your current selection as rich text including model name + timestamp.</li>
-          <li><strong>📄 Export PDF</strong>: opens a new window with a print-optimized HTML report — use the browser's native Ctrl+P → "Save as PDF".</li>
-          <li><strong>Refresh data</strong>: re-fetches <code>/data/snapshot.json</code>. Does NOT re-run the model.</li>
-          <li><strong>📖 Guide</strong>: this page you're reading right now.</li>
+          <li><strong>🌙 / ☀️</strong> Change theme (dark/light). Just looks.</li>
+          <li><strong>中文 / English</strong> Change language.</li>
+          <li><strong>📋 Copy numbers</strong> Copy your selected numbers (with a header).</li>
+          <li><strong>📄 Export PDF</strong> Print the analysis as a report (new window → Ctrl+P → Save as PDF).</li>
+          <li><strong>Refresh data</strong> Re-read the data file. Usually not needed — it auto-updates daily.</li>
+          <li><strong>📖 Guide</strong> The page you're reading right now.</li>
         </ul>
       ),
     },
   },
   {
     id: 'data-status',
-    title: { zh: '① 数据状态条 (DataStatusBar)', en: '① Data status bar' },
+    title: { zh: '① 仪表盘（数据状态条）', en: '① The dashboard (data status bar)' },
     body: {
       zh: (
         <>
-          <p>顶部数据条告诉你：</p>
+          <p>就像车的仪表盘，告诉你车况：</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>数据</strong>: 彩票名 / 当前期数 / 总开奖号码数。</li>
-            <li><strong>更新时间</strong>: snapshot.json 上次导出的时间。</li>
-            <li><strong>模型</strong>: 当前用的 Bayesian L2 (symbol-aggregated)。</li>
-            <li><strong>信号强度</strong>: KL 散度，量化模型跟均匀分布的偏离程度：
-              <ul className="list-circle pl-5 mt-1">
-                <li>&lt; 0.005 = 无信号 (no-signal)</li>
-                <li>0.005 – 0.02 = 弱 (weak)</li>
-                <li>0.02 – 0.05 = 中 (moderate) — 当前 0.0268</li>
-                <li>&gt; 0.05 = 强 (strong)</li>
-              </ul>
+            <li><strong>数据：21 期 · 147 个号码</strong> = 我们手里攒了多少历史记录。越多越好。</li>
+            <li><strong>更新时间</strong> = 数据文件最后刷新时间。</li>
+            <li><strong>模型：Bayesian L2</strong> = 用的什么算法。你不用懂，就当是"计算方式 A"。</li>
+            <li>
+              <strong>信号强度：中（KL=0.026）</strong> = 这堆数据里有没有"味道"。
+              像闻一杯茶：数值越低越像白开水（完全随机），越高越像浓茶（有规律）。
+              现在 0.026 是"有点味，但淡得很"——跟瞎猜差别不大。
             </li>
           </ul>
         </>
       ),
       en: (
         <>
-          <p>The top data strip tells you:</p>
+          <p>Like a car dashboard — tells you how things are:</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Data</strong>: lottery name / period count / total draws.</li>
-            <li><strong>Updated</strong>: when snapshot.json was last exported.</li>
-            <li><strong>Model</strong>: current Bayesian L2 (symbol-aggregated).</li>
-            <li><strong>Signal strength</strong>: KL divergence — how far the model deviates from uniform:
-              <ul className="list-circle pl-5 mt-1">
-                <li>&lt; 0.005 = no-signal</li>
-                <li>0.005 – 0.02 = weak</li>
-                <li>0.02 – 0.05 = moderate — currently 0.0268</li>
-                <li>&gt; 0.05 = strong</li>
-              </ul>
+            <li><strong>Data: 21 periods · 147 draws</strong> = how much history we have. More is better.</li>
+            <li><strong>Updated</strong> = when the data file was last refreshed.</li>
+            <li><strong>Model: Bayesian L2</strong> = which algorithm is used. Don't worry about it.</li>
+            <li>
+              <strong>Signal: moderate (KL=0.026)</strong> = whether this data has any "flavor".
+              Like smelling tea: lower is closer to plain water (pure random), higher is strong tea (a real pattern).
+              0.026 is "a hint of flavor" — barely better than guessing.
             </li>
           </ul>
         </>
@@ -124,109 +112,97 @@ const SECTIONS: Section[] = [
   },
   {
     id: 'countdown',
-    title: { zh: '② 倒计时 (CountdownTimer)', en: '② Countdown timer' },
+    title: { zh: '② 倒计时（下课铃）', en: '② Countdown (the school bell)' },
     body: {
       zh: (
         <p>
-          实时倒计时到下一期澳门开奖 (21:32 每天) 和下一次 cron 数据刷新。
-          ≤ 10 分钟时数字会变红色提醒。
-          点 <strong>立即刷新</strong> 立即重新 fetch snapshot.json。
+          就是"距离下次开奖还有多久"的下课铃。左边是开奖倒计时，右边是数据刷新倒计时。
+          快开奖了数字会变红提醒你。想看最新数据就点"立即刷新"。
         </p>
       ),
       en: (
         <p>
-          Real-time countdown to the next Macau draw (21:32 daily) and the next cron refresh.
-          Numbers turn red when ≤ 10 min to draw.
-          Click <strong>立即刷新 / Refresh now</strong> to refetch snapshot.json immediately.
+          It's just the school bell for the next draw. Left: time until the next draw.
+          Right: time until the next data refresh. Numbers turn red when a draw is close.
+          Click "refresh now" to pull the newest data.
         </p>
       ),
     },
   },
   {
     id: 'selection',
-    title: { zh: '③ 选号控制 (Controls) + 49 球网格 + 覆盖率', en: '③ Selection controls + Ball grid + Coverage' },
+    title: { zh: '③ 选号（点菜模式）', en: '③ Picking numbers (ordering food)' },
     body: {
       zh: (
         <>
-          <p><strong>左栏 Controls</strong>：</p>
+          <p><strong>左边"选择模式"</strong>，就像你点菜：</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Top-N</strong>：用模型概率排序，取前 N 个球。</li>
-            <li><strong>Cover-N</strong>：反向，取模型认为最不该选的 N 个。</li>
-            <li>滑块 1-45 (留 4 个"未选")。</li>
-            <li><strong>应用推荐</strong>：把当前模式的 Top-N/Cover-N 一次性填入选中。</li>
-            <li><strong>重置</strong>：清空选中。</li>
+            <li><strong>Top-N</strong> = 点最热门的 N 道菜（算法觉得最可能出现的号码）。</li>
+            <li><strong>Cover-N</strong> = 反过来，专点最冷门的 N 道。</li>
+            <li>滑块 = 你要点几道（1 到 45）。</li>
+            <li><strong>应用推荐</strong> = 一键把推荐菜全点上。<strong>重置</strong> = 清空重来。</li>
           </ul>
-          <p className="mt-2"><strong>中间 49 球网格 (BallGrid)</strong>：</p>
+          <p className="mt-2"><strong>中间 49 个格子 = 菜单</strong>。每格一道"菜"（一个号码）。</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>背景色 = 五行 (金木水火土)，文字色 = 波色 (红蓝绿)。</li>
-            <li>圆点 ● 表示推荐 (Top-N 或 Cover-N 取决于模式)。</li>
-            <li>点击球切换"已选"。</li>
+            <li>格子底色 = 口味（金木水火土），字色 = 辣度（红蓝绿）。纯分类用的。</li>
+            <li>带 ● 的 = 被推荐；点一下就"下单"（选中）。</li>
           </ul>
-          <p className="mt-2"><strong>覆盖率 (CoverageAnalyzer)</strong>：</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>按生肖 / 五行 / 波色三个维度看你选中的球分布是否"均匀"。</li>
-            <li>选中越多球覆盖率越高。</li>
-          </ul>
+          <p className="mt-2"><strong>覆盖率</strong> = 你点的菜荤素搭不搭。它按生肖/五行/波色检查你有没有"偏食"。</p>
         </>
       ),
       en: (
         <>
-          <p><strong>Left column Controls</strong>:</p>
+          <p><strong>Left "mode" panel</strong> — like ordering food:</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Top-N</strong>: take top N balls by model probability.</li>
-            <li><strong>Cover-N</strong>: invert — take the N balls the model considers least likely.</li>
-            <li>Slider 1–45 (leaves 4 "not picked").</li>
-            <li><strong>Apply recommendation</strong>: fill your selection with the current mode's output.</li>
-            <li><strong>Reset</strong>: clear selection.</li>
+            <li><strong>Top-N</strong> = order the N most popular dishes (numbers the model thinks most likely).</li>
+            <li><strong>Cover-N</strong> = the opposite — order the N least popular.</li>
+            <li>Slider = how many dishes (1–45).</li>
+            <li><strong>Apply</strong> = order all recommended at once. <strong>Reset</strong> = start over.</li>
           </ul>
-          <p className="mt-2"><strong>Middle 49-ball grid (BallGrid)</strong>:</p>
+          <p className="mt-2"><strong>The 49-ball grid in the middle = the menu.</strong> Each cell is one dish.</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Background color = wuxing (金木水火土), text color = wave (红蓝绿).</li>
-            <li>● dot = recommended under current mode (Top-N or Cover-N).</li>
-            <li>Click a ball to toggle "selected".</li>
+            <li>Cell background = flavor (五行), text color = spice level (红蓝绿). Just classification.</li>
+            <li>● dot = recommended; click to "order" (select).</li>
           </ul>
-          <p className="mt-2"><strong>Coverage analyzer</strong>:</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>Per-dimension (zodiac / wuxing / wave) coverage of your selection.</li>
-            <li>More balls picked → higher coverage.</li>
-          </ul>
+          <p className="mt-2"><strong>Coverage</strong> = whether your order is balanced. Checks zodiac/wuxing/wave so you're not "picky eating".</p>
         </>
       ),
     },
   },
   {
     id: 'autopick',
-    title: { zh: '④ 自动选号 (AutoPick)', en: '④ Auto-pick' },
+    title: { zh: '④ 智能点菜（自动选号）', en: '④ Auto-order (auto-pick)' },
     body: {
       zh: (
         <>
-          <p>4 种信号融合方式：</p>
+          <p>帮你自动点一桌菜，有 4 种点法：</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>融合 (combine)</strong>：60% 模型 + 40% 频率，归一化后取前 N (默认)。</li>
-            <li><strong>交集 (intersection)</strong>：同时在模型 Top-N 和频率 Top-N 的球 — 两边都认可。</li>
-            <li><strong>模型 (model)</strong>：纯 Bayesian L2 Top-N。</li>
-            <li><strong>频率 (frequency)</strong>：纯历史 raw count Top-N。</li>
+            <li><strong>融合</strong> = 人气 + 口味综合打分（60% 看算法 + 40% 看历史次数）。</li>
+            <li><strong>交集</strong> = 两本榜单都上榜的菜，两边都认可的。</li>
+            <li><strong>模型</strong> = 只信算法，别的不管。</li>
+            <li><strong>频率</strong> = 只信"过去谁出现最多"。</li>
           </ul>
           <p className="mt-2">
-            ⚠️ 当前数据 <strong>20 期 / 140 球</strong>，每球被抽 2-3 次。
-            四个模式选出来的 Top-20 <strong>高度重叠</strong>，差异在统计噪声内。
-            想数字不一样 → 调小 N / 切 Cover-N / 等 50+ 期。
+            <strong>为什么 4 种点出来数字都差不多？</strong> 因为数据太少！
+            才 21 期，每颗球平均只出现过 3 次——就像全班刚上几天课，每个人的发言次数都差不多，
+            根本排不出明显差别。想让数字不一样：把 N 调小，或者等数据攒到 50 期以上。
           </p>
         </>
       ),
       en: (
         <>
-          <p>4 signal-fusion modes:</p>
+          <p>Auto-orders a table of food, 4 styles:</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Combine</strong>: 60% model + 40% frequency, normalized, top N (default).</li>
-            <li><strong>Intersection</strong>: balls in BOTH model Top-N and frequency Top-N.</li>
-            <li><strong>Model</strong>: pure Bayesian L2 Top-N.</li>
-            <li><strong>Frequency</strong>: pure raw-count ranking.</li>
+            <li><strong>Combine</strong> = popularity + flavor combined (60% model + 40% history).</li>
+            <li><strong>Intersection</strong> = dishes on BOTH ranking lists — both sides approve.</li>
+            <li><strong>Model</strong> = trust the algorithm only.</li>
+            <li><strong>Frequency</strong> = trust "who appeared most in the past" only.</li>
           </ul>
           <p className="mt-2">
-            ⚠️ Current data: <strong>20 periods / 140 draws</strong> ≈ 2.8 draws per ball.
-            All four modes' Top-20 outputs <strong>heavily overlap</strong> — the differences are within statistical noise.
-            To get different numbers: shrink N / switch to Cover-N / wait until 50+ periods.
+            <strong>Why do all 4 give similar numbers?</strong> Not enough data!
+            Only 21 periods — each ball has appeared ~3 times on average.
+            It's like a class that just started: everyone has spoken about the same number of times,
+            so there's no real ranking. To get different numbers: shrink N, or wait for 50+ periods.
           </p>
         </>
       ),
@@ -234,31 +210,34 @@ const SECTIONS: Section[] = [
   },
   {
     id: 'win-prob',
-    title: { zh: '⑤ 赢的概率 (WinProbabilityCard)', en: '⑤ Win probability' },
+    title: { zh: '⑤ 中奖率（赢的概率）', en: '⑤ Win probability' },
     body: {
       zh: (
         <>
-          <p>两条不同口径的概率公式 (都是均匀 i.i.d. 假设)：</p>
+          <p>两个数字，两种算法：</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>至少中 1 球</strong>: <code>1 − C(42,7) / C(49,7) ≈ 98.18%</code>。选 20 个号时几乎必中普通 6+1 球，但<strong>不等于赚钱</strong>。</li>
-            <li><strong>中特码 (第 7 球)</strong>: <code>N / 49</code>。选 20 个时 40.82%。</li>
+            <li><strong>至少中 1 球：98%</strong> — 选 20 个号码，大概率能碰到开奖号里的一个。
+              但"碰到"不等于"赢钱"。就像考试 100 道题你蒙对 1 道——概率很高，可那是蒙的。</li>
+            <li><strong>中特码：40.8%</strong> — 第 7 个特殊号码的命中率。</li>
           </ul>
           <p className="mt-2 text-red-400 font-medium">
-            ⚠️ 真实单注单期中奖概率 ≤ 1/49 = 2.04%，与 N 无关 — 选越多反而稀释。
-            卡片底部的红字就是这个铁律。
+            ⚠️ 铁律：单张彩票中头奖的概率 = <strong>1/49 ≈ 2%</strong>，跟你选几个号没关系！
+            选得越多，每张票的概率反而越被稀释。这张卡底下的红字就是这句话。
           </p>
         </>
       ),
       en: (
         <>
-          <p>Two probability formulas (both uniform-i.i.d. assumption):</p>
+          <p>Two numbers, two formulas:</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>At least 1 hit</strong>: <code>1 − C(42,7) / C(49,7) ≈ 98.18%</code>. With 20 picks you almost always hit a regular 6+1 ball — but <strong>that doesn't mean you make money</strong>.</li>
-            <li><strong>Hit special (7th ball)</strong>: <code>N / 49</code>. 40.82% with 20 picks.</li>
+            <li><strong>At least 1 hit: 98%</strong> — pick 20 numbers and you'll probably match one drawn ball.
+              But "matching" ≠ "winning money". Like a 100-question test where you guess 1 right — high chance, but it's a guess.</li>
+            <li><strong>Hit special: 40.8%</strong> — chance of matching the 7th special ball.</li>
           </ul>
           <p className="mt-2 text-red-400 font-medium">
-            ⚠️ Real per-ticket per-draw win rate ≤ 1/49 = 2.04%, independent of N — picking more <em>dilutes</em> your per-ticket odds.
-            The red text at the bottom of the card is exactly this iron rule.
+            ⚠️ Iron rule: the chance of winning the jackpot on one ticket is <strong>1/49 ≈ 2%</strong>,
+            no matter how many numbers you pick! Picking more actually dilutes per-ticket odds.
+            That's the red text at the bottom of the card.
           </p>
         </>
       ),
@@ -266,51 +245,35 @@ const SECTIONS: Section[] = [
   },
   {
     id: 'expected-loss',
-    title: { zh: '⑥ 期望亏损模拟器 (ExpectedLossCard)', en: '⑥ Expected-loss simulator' },
+    title: { zh: '⑥ 亏钱计算器（期望亏损）', en: '⑥ The loss calculator (expected loss)' },
     body: {
       zh: (
         <>
-          <p>默认输入: 派彩 45×, 每年 156 期, 10 年。</p>
-          <pre className="bg-bg-base border border-line-default rounded p-3 text-xs num">
-{`总投注    = 期数 × 年数 × 1 (每期 1 元)
-期望回报  = 总投注 × 派彩 × (7/49)
-期望盈亏  = 期望回报 − 总投注
-ROI       = 期望盈亏 / 总投注`}
-          </pre>
+          <p><strong>这个最重要，先看这个。</strong>它算的是：长期买，你会亏多少。</p>
+          <p>逻辑很简单——开奖时 49 颗球里抽 7 颗，所以中奖概率约 1/7。彩票给多少倍回本才不亏？</p>
+          <p className="mt-1 font-medium">答案是 7 倍。派彩低于 7 倍，长期必亏，数学铁律。</p>
           <p className="mt-2">
-            ⚠️ <strong>关键认知</strong>:
+            那为什么默认输入 45 倍时显示"赚 1736%"？因为 45 倍是<strong>理想世界</strong>——
+            现实中没有任何彩票给 45 倍。就像"如果老虎机吐 45 倍你就能赢"，但老虎机是庄家设计的。
           </p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>派彩 ≥ 49/7 ≈ 7× 时，<strong>纯随机选号就已经正期望</strong>。</li>
-            <li>派彩 45× &lt; 7× — 长期<strong>数学上负期望</strong>。</li>
-            <li>你看到的默认 ROI +1736.7% 是因为派彩假设 45 — 真实私彩几乎不可能达到。</li>
-            <li><strong>结论写在卡片底下</strong>: "真实私彩几乎不可能达到派彩 45"。</li>
-          </ul>
-          <p className="mt-2">
-            这块组件是<strong>反讽设计</strong> — 让"看起来很赚"的数字自带 disclaimer。
+          <p className="mt-2 text-red-400 font-medium">
+            真实世界的彩票，这个计算器算出来是<strong>负数</strong>。
+            你看到"赚"字，只是因为输入了一个现实中不存在的数字。
           </p>
         </>
       ),
       en: (
         <>
-          <p>Defaults: payout 45×, 156 draws/year, 10 years.</p>
-          <pre className="bg-bg-base border border-line-default rounded p-3 text-xs num">
-{`Total bet     = draws × years × 1
-Expected ret  = Total bet × payout × (7/49)
-Expected PnL  = Expected ret − Total bet
-ROI           = Expected PnL / Total bet`}
-          </pre>
+          <p><strong>Most important — read this first.</strong> It calculates: over the long run, how much you lose.</p>
+          <p>The logic is simple — 7 balls are drawn from 49, so your win rate is ~1/7. What payout do you need to break even?</p>
+          <p className="mt-1 font-medium">Answer: 7×. Below 7×, you lose long-term. Math, not opinion.</p>
           <p className="mt-2">
-            ⚠️ <strong>Key insights</strong>:
+            So why does the default (45×) show "+1736%" profit? Because 45× is <strong>fantasy land</strong> —
+            no real lottery pays 45×. Like "you'd win if the slot machine paid 45×" — but slots are designed by the house.
           </p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>Payout ≥ 49/7 ≈ 7× → even pure random picks have <strong>positive expected value</strong>.</li>
-            <li>Payout 45× &lt; 7× → long-run <strong>negative expected value</strong> regardless of strategy.</li>
-            <li>The default ROI +1736.7% assumes a payout of 45 — real private books rarely offer that.</li>
-            <li><strong>Card bottom explicitly says</strong> "真实私彩几乎不可能达到派彩 45".</li>
-          </ul>
-          <p className="mt-2">
-            This component is <strong>intentionally ironic</strong> — the "looks profitable" numbers come with a built-in disclaimer.
+          <p className="mt-2 text-red-400 font-medium">
+            With a real lottery payout, this calculator shows a <strong>negative</strong> number.
+            If you see "profit", it's only because someone typed in a number that doesn't exist in reality.
           </p>
         </>
       ),
@@ -318,31 +281,37 @@ ROI           = Expected PnL / Total bet`}
   },
   {
     id: 'strategy',
-    title: { zh: '⑦ 策略对比 + 滚动回测', en: '⑦ Strategy comparison + Rolling backtest' },
+    title: { zh: '⑦ 考后对答案（回测）', en: '⑦ Grading your past answers (backtest)' },
     body: {
       zh: (
         <>
-          <p><strong>StrategyComparison</strong>: 把 Top-N / Cover-N / 随机基线三种策略在历史数据上"模拟选号"，比较命中率。</p>
-          <p className="mt-2">
-            <strong>RollingWindowBacktest</strong>: 在最近 30 / 90 / 全期三个时间窗口上分别跑回测，
-            让你看到<strong>短窗口运气 vs 长期回归</strong>。
+          <p>
+            <strong>策略对比</strong> = 拿过去的开奖记录，假装"我当时用的是这个策略"，看能对几题。
+            就像考完试对答案——考得好不好，得等对完才知道。
           </p>
           <p className="mt-2">
-            当前 20 期数据下，所有策略命中率都在 ±2× random 范围内波动 — 没有任何模型显著优于随机。
-            这是<strong>预期行为</strong>，不是 bug。
+            <strong>滚动回测</strong> = 分三段对答案：最近 30 天、最近 90 天、全部历史。
+            看看某个策略是"最近运气好"还是"一直都不错"。
+          </p>
+          <p className="mt-2">
+            现在数据才 21 期，所有策略的命中率都在随机上下波动——没有一个明显跑赢"闭眼瞎选"。
+            <strong>这是正常的</strong>，不是 bug。数据越多，回测越有意义。
           </p>
         </>
       ),
       en: (
         <>
-          <p><strong>StrategyComparison</strong>: simulate three strategies on historical data — Top-N, Cover-N, and a random baseline — and compare hit rates.</p>
-          <p className="mt-2">
-            <strong>RollingWindowBacktest</strong>: runs the same backtest on 3 windows — last 30, last 90, full history —
-            so you can see <strong>short-window luck vs long-run mean-reversion</strong>.
+          <p>
+            <strong>Strategy comparison</strong> = take past draws, pretend "I used this strategy back then",
+            and see how many you'd get right. Like checking answers after an exam — you only know how you did after grading.
           </p>
           <p className="mt-2">
-            At 20 periods, all strategies oscillate within ±2× of random — no model significantly beats random.
-            This is <strong>expected</strong>, not a bug.
+            <strong>Rolling backtest</strong> = grade in three chunks: last 30 days, last 90 days, all history.
+            See whether a strategy was "recently lucky" or "consistently okay".
+          </p>
+          <p className="mt-2">
+            With only 21 periods, every strategy's hit rate bounces around random — none clearly beats "picking blind".
+            <strong>That's normal</strong>, not a bug. More data → more meaningful backtest.
           </p>
         </>
       ),
@@ -350,76 +319,63 @@ ROI           = Expected PnL / Total bet`}
   },
   {
     id: 'stats',
-    title: { zh: '⑧ 统计深度 (频率条 + 符号维度热力图 + 均匀性检验)', en: '⑧ Statistical depth (frequency + heatmap + uniformity)' },
+    title: { zh: '⑧ 显微镜（统计深度）', en: '⑧ The microscope (statistical depth)' },
     body: {
       zh: (
         <>
-          <p><strong>NumberFrequencySparkline</strong>：每个球的历史出现频率条 + 均匀期望线。可以一眼看出哪些球"热"哪些"冷"。</p>
-          <p className="mt-2">
-            <strong>SymbolDimensionHeatmap</strong>：每个 period × 生肖/五行/波色的热力图，模式随时间的演化。
-          </p>
-          <p className="mt-2">
-            <strong>UniformityCheck</strong>：卡方检验 (df = n_categories - 1)，
-            p-value &lt; 0.05 才拒绝"均匀"假设。当前 20 期 p ≈ 0.99 — 完全没法拒绝均匀。
-          </p>
-          <p className="mt-2">
-            <strong>SymbolDimensionBreakdown</strong>：比较 3 个符号维度 (生肖/五行/波色) vs 49 球随机基线，
-            哪个维度提供最强信号 (lift%)。当前都是 ±5% 噪声内。
-          </p>
+          <p>这几个小图是给爱研究数据的人看的显微镜：</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>频率条</strong> = 每个号码出现次数的排行榜，一眼看到谁"热"谁"冷"。</li>
+            <li><strong>热力图</strong> = 每一期的生肖/五行/波色分布，像温度表看变化。</li>
+            <li><strong>均匀性检验</strong> = "查作弊"的。如果开奖完全随机，数字应该很均匀；
+              它算出来 p=0.99，意思是"完全看不出有鬼"，一切正常。</li>
+            <li><strong>符号维度</strong> = 生肖/五行/波色里有没有"人气王"。</li>
+          </ul>
         </>
       ),
       en: (
         <>
-          <p><strong>NumberFrequencySparkline</strong>: per-ball historical frequency bars + uniform expectation line. At-a-glance view of "hot" vs "cold" balls.</p>
-          <p className="mt-2">
-            <strong>SymbolDimensionHeatmap</strong>: period × zodiac/wuxing/wave heatmap showing pattern evolution over time.
-          </p>
-          <p className="mt-2">
-            <strong>UniformityCheck</strong>: chi-square goodness-of-fit test (df = n_categories − 1).
-            Only p &lt; 0.05 lets you reject "uniform". Current p ≈ 0.99 — uniform cannot be rejected.
-          </p>
-          <p className="mt-2">
-            <strong>SymbolDimensionBreakdown</strong>: compares 3 symbol dimensions (zodiac / wuxing / wave) vs the 49-ball random baseline, showing which dimension provides the strongest signal (lift %). All currently within ±5% noise.
-          </p>
+          <p>These small charts are a microscope for data nerds:</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Frequency bars</strong> = ranking of how often each number appears. See "hot" vs "cold" at a glance.</li>
+            <li><strong>Heatmap</strong> = per-period zodiac/wuxing/wave distribution, like a temperature chart.</li>
+            <li><strong>Uniformity check</strong> = "cheating detector". If draws were truly random, numbers should be uniform;
+              it computes p=0.99, meaning "no sign of anything fishy" — all normal.</li>
+            <li><strong>Symbol breakdown</strong> = any "popular kid" among zodiac/wuxing/wave.</li>
+          </ul>
         </>
       ),
     },
   },
   {
     id: 'disclaimer',
-    title: { zh: '⑨ 最重要的一块: 顶部 Disclaimer', en: '⑨ The most important piece: top disclaimer' },
+    title: { zh: '⑨ 最重要：别拿真钱玩', en: '⑨ Most important: don\'t use real money' },
     body: {
       zh: (
         <>
-          <p>
-            页面顶部那条<strong>红色 DisclaimerBanner</strong>不是装饰。它写明：
-          </p>
+          <p>顶部那条红字不是装饰，是真心话：</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>本工具是"统计学习项目"，不是"预测服务"。</li>
-            <li>真实开奖是 i.i.d. 均匀随机 — 长期期望 ROI 必为负。</li>
-            <li>不提供也不支持任何真实下注。</li>
+            <li>这是<strong>学习统计的玩具</strong>，不是"赚钱机器"。</li>
+            <li>开奖 = 随机，任何你看到的"规律"都只是巧合。</li>
+            <li>长期买，期望必亏（不信去第 ⑥ 节按按计算器）。</li>
           </ul>
           <p className="mt-2 text-red-400 font-medium">
-            不要拿真钱试。
-            如果你想理解自己的赌博行为模式，建议用 (b) budget tracker 之类工具监控实际花费，
-            而不是用本工具追踪下注结果 — 那会让"亏的钱可视化"，强化赌徒谬误。
+            真想拿真钱买？先用第 ⑥ 节的亏钱计算器算算你会亏多少，
+            算完大概率就不想买了。这就是它存在的意义。
           </p>
         </>
       ),
       en: (
         <>
-          <p>
-            The <strong>red DisclaimerBanner</strong> at the very top of the page is NOT decorative. It states:
-          </p>
+          <p>The red banner at the top isn't decoration — it's the truth:</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>This is a "statistical-learning project", not a "prediction service".</li>
-            <li>Real draws are i.i.d. uniform random — long-run expected ROI is negative.</li>
-            <li>No real betting is supported or endorsed.</li>
+            <li>This is a <strong>toy for learning statistics</strong>, not a money machine.</li>
+            <li>Draws are random. Any "pattern" you see is coincidence.</li>
+            <li>Long-term, expected value is negative (check section ⑥ and click the calculator).</li>
           </ul>
           <p className="mt-2 text-red-400 font-medium">
-            Do not gamble with real money.
-            If you want to understand your gambling behavior, use a budget-tracker to monitor actual spend —
-            not this tool's tracking features. That would just make losses visible, reinforcing gambler's fallacy.
+            Thinking of using real money? First use the loss calculator in section ⑥ to see how much you'd lose.
+            After that, you probably won't want to. That's its whole purpose.
           </p>
         </>
       ),
@@ -438,12 +394,12 @@ export function UserGuide({ onClose }: { onClose: () => void }) {
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
           <div>
             <h1 className="text-lg font-semibold tracking-tight text-ink-primary">
-              {isZh ? '使用指南 · User Guide' : 'User Guide · 使用指南'}
+              {isZh ? '使用指南（大白话版）' : 'User Guide (plain talk)'}
             </h1>
             <p className="text-xs text-ink-muted mt-0.5">
               {isZh
-                ? '每个区域的功能与算法 · 读一遍再开始'
-                : 'What every section does + the math behind it · read before using'}
+                ? '不整术语，全是比喻。30 秒看完。'
+                : 'No jargon, all metaphors. 30 seconds to read.'}
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -458,7 +414,7 @@ export function UserGuide({ onClose }: { onClose: () => void }) {
                 hover:bg-emerald-500/25 transition
               "
             >
-              {isZh ? '← 返回主界面' : '← Back to app'}
+              {isZh ? '← 返回' : '← Back'}
             </button>
           </div>
         </div>
@@ -466,10 +422,10 @@ export function UserGuide({ onClose }: { onClose: () => void }) {
 
       <main className="max-w-4xl mx-auto px-4 py-6 space-y-3">
         <div className="panel p-4 bg-amber-500/5 border-amber-500/20 text-sm text-amber-200">
-          <strong>{isZh ? '先读' : 'Read first'}:</strong>{' '}
+          <strong>{isZh ? '先说结论' : 'TL;DR'}:</strong>{' '}
           {isZh
-            ? '本指南按页面从上到下的顺序解释。跳到任意一节:'
-            : 'This guide follows the page top-to-bottom. Jump to any section:'}
+            ? '这是看历史的工具，不是算命工具。开奖没规律，任何"规律"都是巧合。按第 ⑥ 节能算出你长期亏多少。'
+            : 'This is a history viewer, not a fortune teller. Draws have no pattern; any "pattern" is coincidence. Section ⑥ shows your long-run loss.'}
         </div>
 
         <nav className="flex flex-wrap gap-1.5 text-xs">
@@ -514,22 +470,6 @@ export function UserGuide({ onClose }: { onClose: () => void }) {
               </section>
             );
           })}
-        </div>
-
-        <div className="panel p-4 bg-bg-raised">
-          <h3 className="label mb-2">
-            {isZh ? '调试速查 (代码路径)' : 'Debug cheatsheet (code paths)'}
-          </h3>
-          <ul className="text-xs font-mono text-ink-secondary space-y-1">
-            <li>• Bayesian L2 predictor → <code>src/lib/predictor.ts:81</code></li>
-            <li>• AutoPick 4 modes → <code>src/components/AutoPick.tsx</code></li>
-            <li>• Ball frequency stats → <code>src/lib/statistics.ts:20</code></li>
-            <li>• Chi-square test → <code>src/lib/statistics.ts:63</code></li>
-            <li>• Expected loss math → <code>src/components/ExpectedLossCard.tsx</code></li>
-            <li>• Cron pipeline log → <code>~/dev/liuhe/atlas/logs/cron-pipeline.log</code></li>
-            <li>• Project history → <code>~/dev/liuhe/atlas/logs/M*.md</code></li>
-            <li>• Backend DB export → <code>~/dev/liuhe/atlas/export_snapshot.py</code></li>
-          </ul>
         </div>
 
         <div className="text-center text-[10px] text-ink-dim py-6">
