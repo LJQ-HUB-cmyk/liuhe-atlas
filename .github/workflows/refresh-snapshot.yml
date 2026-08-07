@@ -5,7 +5,7 @@ on:
     # 22:00 UTC = ~06:00 Beijing / ~18:00 EDT (next day)
     # 距 21:32 澳门 draw 约 30 分钟, 让本地 cron 先跑完
     - cron: '0 22 * * *'
-  workflow_dispatch:    # 手动触发: Actions tab → Refresh snapshot → Run
+  workflow_dispatch:    # 手动触发: Actions tab → Refresh snapshot → Run workflow
 
 permissions:
   contents: write
@@ -16,58 +16,53 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+        # Fetch the full history so we can compare snapshot.json against HEAD.
         with:
-          python-version: '3.11'
+          fetch-depth: 0
 
-      - name: Install Python deps
-        working-directory: atlas
-        run: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install --quiet scrapy requests pymysql
+      # IMPORTANT: We DO NOT touch atlas-ui/public/data/snapshot.json here.
+      #
+      # Why: Linux CI runner has no SQLite DB, so export_snapshot.py would
+      # fall back to writing an empty snapshot (394 bytes), which clobbers
+      # the real ~70K data the Mac cron already pushed.
+      #
+      # Instead, real data is owned by the Mac cron:
+      #   ~/.hermes/scripts/liuhe-atlas-daily.sh  (runs 21:35 EDT daily)
+      #   → cd atlas && ./.venv/bin/python export_snapshot.py
+      #   → writes atlas-ui/public/data/snapshot.json (real DB data)
+      #
+      # This workflow's only job is to nudge Vercel to rebuild the frontend
+      # once a day so the deployed site picks up the latest snapshot.
+      # We do that with an empty commit.
 
-      - name: Fetch latest lottery data
-        working-directory: atlas
-        env:
-          PYTHONUNBUFFERED: '1'
+      - name: Verify snapshot is real data (sanity check)
         run: |
-          # Best-effort: try to refresh. If upstream is down, we still commit
-          # the existing snapshot.json (no-op) so Vercel rebuild has fresh code.
-          source .venv/bin/activate
-          python atlas/spiders/m2_5_daily_fetcher.py || echo "WARN: fetcher failed, keeping existing snapshot"
-
-      - name: Re-export snapshot.json (best-effort on CI)
-        working-directory: atlas
-        continue-on-error: true
-        # On Linux CI without DB, this writes an EMPTY fallback snapshot.
-        # We don't want that to overwrite the real data the Mac already pushed.
-        # The actual commit/push step below uses --allow-empty so it triggers
-        # Vercel rebuild without touching snapshot.json when export fails.
-        run: |
-          source .venv/bin/activate
-          python export_snapshot.py || echo "export failed (expected on CI)"
-          # If CI wrote empty data, REVERT so we don't clobber real data
-          if [ -f "$GITHUB_WORKSPACE/atlas-ui/public/data/snapshot.json" ]; then
-            REAL_SIZE=$(stat -c%s "$GITHUB_WORKSPACE/atlas-ui/public/data/snapshot.json" 2>/dev/null || stat -f%z "$GITHUB_WORKSPACE/atlas-ui/public/data/snapshot.json")
-            if [ "$REAL_SIZE" -lt "10000" ]; then
-              echo "CI wrote tiny snapshot ($REAL_SIZE bytes) — restoring real data from git"
-              git checkout HEAD -- atlas-ui/public/data/snapshot.json
-            fi
+          SIZE=$(stat -c%s atlas-ui/public/data/snapshot.json 2>/dev/null || stat -f%z atlas-ui/public/data/snapshot.json)
+          PERIODS=$(python3 -c "import json; print(json.load(open('atlas-ui/public/data/snapshot.json'))['meta'].get('period_count', 0))")
+          echo "snapshot.json size: ${SIZE} bytes"
+          echo "snapshot.json periods: ${PERIODS}"
+          if [ "$SIZE" -lt "10000" ] || [ "$PERIODS" -lt "5" ]; then
+            echo "WARN: snapshot looks empty (size=${SIZE}, periods=${PERIODS})"
+            echo "WARN: this may indicate the Mac cron hasn't run yet, or the"
+            echo "WARN: empty-fallback from a previous bad export is still on HEAD."
+            echo "WARN: skipping push — please investigate before re-enabling this workflow."
+            exit 1
           fi
+          echo "OK — snapshot has real data, safe to proceed."
 
-      - name: Commit and push (trigger Vercel rebuild)
+      - name: Trigger Vercel rebuild (empty commit)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add atlas-ui/public/data/snapshot.json
-          # --allow-empty ensures we still push a trigger commit even if
-          # the snapshot didn't change (so Vercel rebuilds the frontend).
-          git commit --allow-empty -m "chore: refresh snapshot.json $(date -u +'%Y-%m-%d %H:%M UTC')" || {
-            echo "nothing to commit"
-            exit 0
+          # --allow-empty: push a commit even if nothing changed, just to
+          # trigger Vercel's deploy webhook.
+          git commit --allow-empty -m "chore: trigger Vercel rebuild $(date -u +'%Y-%m-%d %H:%M UTC')"
+          # Pull first to defend against a concurrent push from the Mac
+          # (e.g. if you ran `git push` while CI was running).
+          git pull --rebase --autostash origin main || {
+            echo "rebase conflict — Mac pushed while we were running."
+            echo "Aborting to avoid clobbering the Mac's data."
+            exit 1
           }
           git push origin main
           echo "pushed → Vercel will rebuild"
